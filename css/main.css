@@ -1,0 +1,17 @@
+/* ==========================================
+   Estilos Globais
+========================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--font-family);
+
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-weight: 700;
+}
