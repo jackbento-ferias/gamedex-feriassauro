@@ -1182,7 +1182,7 @@ Layout 03 - 1 Coluna (Mobile)
 .adventure-achievement {
     display: block !important;
 
-    width: 100% !important;
+    width: 60% !important;
     height: auto !important;
 
     margin: 8px 0 0 0 !important;
