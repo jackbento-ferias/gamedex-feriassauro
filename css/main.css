@@ -970,6 +970,7 @@ h1 {
     align-items: center;
 
     width: 100%;
+    box-sizing: border-box;
 
     padding: var(--space-xl) var(--space-lg);
 
@@ -1068,6 +1069,17 @@ Layout 03 - 1 Coluna (Mobile)
 
 @media (max-width: 767px) {
 
+
+      /* ==========================================
+       Correção de largura no Mobile
+    ========================================== */
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     .container {
 
         padding: 0 12px;
@@ -1158,48 +1170,123 @@ Layout 03 - 1 Coluna (Mobile)
 }
 
 /* ==========================================
-   Adventure Status — Mobile
+   Adventure Card — Mobile
+========================================== */
+
+.adventure-card {
+    display: grid;
+
+    grid-template-columns: 112px minmax(0, 1fr);
+
+    column-gap: var(--space-md);
+    row-gap: var(--space-md);
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Permite que os elementos internos
+   participem do grid do card */
+.adventure-details {
+    display: contents;
+}
+
+/* ==========================================
+   Capa
+========================================== */
+
+.adventure-cover {
+    width: 112px;
+    max-width: 112px;
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+/* ==========================================
+   Título
+========================================== */
+
+.adventure-title {
+    grid-column: 2;
+    grid-row: 1;
+
+    min-width: 0;
+}
+
+/* ==========================================
+   Informações
+========================================== */
+
+.adventure-info {
+    grid-column: 2;
+    grid-row: 2;
+
+    min-width: 0;
+}
+
+/* ==========================================
+   Resultado da aventura
 ========================================== */
 
 .adventure-status {
-    display: block !important;
-    width: 100% !important;
+    grid-column: 1 / -1;
+    grid-row: 3;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+
+    gap: var(--space-md);
+
+    margin-top: var(--space-xs);
 }
 
-/* Dificuldade */
+/* ==========================================
+   Dificuldade
+========================================== */
+
 .adventure-difficulty {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
+    display: flex;
 
-    width: max-content !important;
+    flex-direction: column;
 
-    margin-top: 10px;
-    margin-bottom: 8px;
+    align-items: flex-start;
+
+    margin-top: 0;
 }
 
-/* Platina */
+/* ==========================================
+   Platina
+========================================== */
+
 .adventure-achievement {
-    display: block !important;
+    display: flex;
 
-    width: 60% !important;
-    height: auto !important;
+    align-items: center;
+    justify-content: flex-end;
 
-    margin: 8px 0 0 0 !important;
+    width: auto;
+
+    margin: 0;
 }
 
-/* Badge */
+/* Ícone da Platina */
+
 .adventure-achievement .achievement-badge {
-    display: block !important;
+    position: static;
 
-    position: static !important;
+    display: block;
 
-    width: 70px !important;
-    height: auto !important;
+    width: 90px;
+    height: auto;
 
-    margin: 0 !important;
+    margin: 0;
 }
-
 
 .twitch-status {
     width: 100%;
@@ -1209,6 +1296,25 @@ Layout 03 - 1 Coluna (Mobile)
 
 .twitch-status-action {
     white-space: nowrap;
+}
+
+/* ==========================================
+   Footer — Mobile
+========================================== */
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.footer .container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 }
