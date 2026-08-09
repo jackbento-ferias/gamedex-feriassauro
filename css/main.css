@@ -1139,6 +1139,19 @@ Layout 03 - 1 Coluna (Mobile)
     row-gap: var(--space-md);
 }
 
+.adventure-card {
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+
+    padding: var(--space-md);
+    gap: var(--space-md);
+}
+
+.adventure-card > * {
+    min-width: 0;
+}
+
 .twitch-status {
     width: 100%;
     max-width: 350px;
