@@ -1,6 +1,6 @@
-/* ==========================================
-   Estilos Globais
-========================================== */
+/* ==================================================
+   RESET
+================================================== */
 
 body {
     margin: 0;
@@ -14,4 +14,1139 @@ body {
 
 h1 {
     font-weight: 700;
+}
+
+
+/* ==================================================
+   LAYOUT
+================================================== */
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.main {
+    padding: var(--space-2xl) 0;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+    width: 100%;
+    padding: 20px 0;
+
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.branding {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.site-logo {
+    width: 280px;
+    height: auto;
+    display: block;
+}
+
+
+.header-twitch {
+    display: flex;
+    align-items: center;
+}
+
+.twitch-status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+    padding: var(--space-md) var(--space-lg);
+
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    font-family: var(--font-family);
+
+    background-color: var(--color-background);
+
+    cursor: pointer;
+
+    color: inherit;
+    text-decoration: none;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.twitch-status:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-surface);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.twitch-status:active {
+    transform: translateY(0);
+}
+
+
+.twitch-status-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.twitch-status-label {
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+.twitch-status-action {
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.015em;
+    line-height: 1.2;
+    opacity: 0.8;
+}
+
+.twitch-status-icon {
+    width: 26px;
+    height: 26px;
+
+    flex-shrink: 0;
+
+    display: block;
+}
+
+/* ==================================================
+   JOURNEY SUMMARY
+================================================== */
+
+.journey-summary {
+    margin-bottom: var(--space-2xl);
+}
+
+.summary-panel {
+    padding: var(--space-xl);
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+}
+
+
+/* ---------- Section Header ---------- */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+
+    margin-bottom: var(--space-xl);
+}
+
+.section-icon {
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.section-icon img {
+
+    width: 22px;
+    height: 22px;
+
+    display: block;
+
+    transform: translateY(1px);
+
+}
+.section-header h2 {
+    margin: 0;
+
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.section-divider {
+    width: 1px;
+    height: 20px;
+
+    margin: 0 var(--space-sm);
+
+    background-color: var(--color-border);
+
+    flex-shrink: 0;
+}
+
+.section-header p {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* ---------- Journey Grid ---------- */
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: var(--space-lg);
+
+    margin-top: var(--space-lg);
+}
+
+
+/* ==================================================
+   JOURNEY CARDS
+================================================== */
+
+.journey-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 220px;
+    padding: var(--space-lg);
+
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+}
+
+.journey-card-heading {
+
+    display: grid;
+
+    grid-template-columns: 40px 1fr;
+
+    align-items: center;
+
+    column-gap: var(--space-sm);
+
+    margin-bottom: var(--space-xs);
+
+}
+
+/* ==================================================
+   JOURNEY CARD BODY
+================================================== */
+
+.journey-card-body {
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 24px;
+
+}
+
+.journey-card-icon {
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.journey-card-icon img {
+
+    width: 18px;
+    height: 18px;
+
+    display: block;
+
+    object-fit: contain;
+
+}
+
+.journey-card-title {
+
+    margin: 0;
+
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+}
+
+.journey-card-value {
+
+    font-size: 4.75rem;
+    font-weight: 900;
+
+    line-height: 1;
+
+    color: var(--color-primary);
+
+    font-variant-numeric: tabular-nums;
+
+    text-shadow: 0 0 10px rgba(18, 253, 4, .12);
+
+}
+.journey-card-caption {
+    margin-top: 10px;
+
+    font-size: .9rem;
+
+    color: var(--color-text-secondary);
+}
+
+/* ==================================================
+   JOURNEY CARD FRANCHISE
+================================================== */
+
+.journey-card-franchise {
+
+    max-width: 180px;
+
+    margin: 0;
+
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--color-primary);
+
+    text-shadow: 0 0 10px rgba(18, 253, 4, .12);
+
+}
+
+/* ==================================================
+   JOURNEY CARD SUBTITLE
+================================================== */
+
+.journey-card-subtitle {
+
+    margin-top: 8px;
+
+    font-size: .9rem;
+    font-weight: 400;
+
+    color: var(--color-text-secondary);
+
+    text-align: center;
+
+}
+
+/* ==================================================
+   JOURNEY CARD FOOTER
+================================================== */
+
+.journey-card-footer {
+
+    margin-top: auto;
+
+    padding-bottom: 2px;
+
+    font-size: .82rem;
+
+    font-style: italic;
+
+    color: rgba(255,255,255,.45);
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   JOURNEY CARD CONTENT
+================================================== */
+
+.journey-card-content {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    flex: 1;
+
+    margin-top: 12px;
+
+    gap: 8px;
+
+}
+
+/* ==================================================
+   JOURNEY CARD GAME INFO
+================================================== */
+
+.journey-card-game-info {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 16px;
+
+    flex: 1;
+    width: 100%;
+
+}
+
+/* ==================================================
+   JOURNEY CARD COVER
+================================================== */
+
+.journey-card-cover {
+
+    display: flex;
+    justify-content: center;
+
+    margin: -4px;
+
+}
+
+.journey-card-cover img {
+
+    width: 135px;
+    height: 202px;
+
+    border: 1px solid rgba(32, 144, 249, .55);
+
+    box-shadow:
+    0 0 8px rgba(32, 144, 249, .18);
+
+    border-radius: var(--radius-md);
+
+    object-fit: cover;
+
+}
+
+/* ==================================================
+   JOURNEY CARD GAME
+================================================== */
+
+.journey-card-game-title {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    color: var(--color-text-primary);
+
+
+}
+
+/* ==================================================
+   JOURNEY CARD PLATFORM
+================================================== */
+
+.journey-card-game-platform {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+.journey-card-game-platform img {
+
+    width: 110px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+}
+
+.journey-card-game-platform span {
+
+    display: none;
+
+}
+
+/* ==================================================
+   JOURNEY CARD FOOTER PLATFORM
+================================================== */
+
+.journey-card-footer-platform {
+
+    margin-top: auto;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 56px;
+
+}
+
+/* ==================================================
+   ADVENTURES
+================================================== */
+
+/* Estrutura da lista de jogos */
+/* Em desenvolvimento */
+
+/* Adventure Panel */
+
+.adventure-panel {
+
+}
+
+/* Adventure Content */
+
+.adventure-content {
+
+}
+
+/* Adventure Filter */
+
+.adventure-filter {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-xs);
+
+    margin-top: var(--space-lg);
+
+}
+
+/* Adventure Filter Row */
+
+.adventure-filter-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-md);
+
+}
+
+/* Adventure Filter Label */
+
+.adventure-filter-label {
+
+    font-size: .875rem;
+    font-weight: 600;
+
+}
+
+/* Adventure Filter Select */
+
+.adventure-filter-select {
+
+    width: 100%;
+
+    flex: 1;
+
+    padding: 12px 16px;
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    color: var(--color-text-primary);
+
+    font-size: 1rem;
+
+    appearance: none;
+
+}
+
+/* Adventure Filter Counter */
+
+.adventure-filter-counter {
+
+    color: var(--color-text-secondary);
+
+    font-size: .875rem;
+
+    font-weight: 500;
+
+}
+
+
+/* Adventure List */
+
+.adventure-list {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-lg);
+
+    margin-top: var(--space-lg);
+
+}
+
+@media (min-width: 1024px) {
+
+    .adventure-list {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: var(--space-lg);
+
+    }
+
+}
+
+
+/* Adventure Card */
+
+.adventure-card {
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    padding: var(--space-lg);
+
+    display: flex;
+
+    gap: var(--space-lg);
+
+}
+
+
+/* Adventure Cover */
+
+.adventure-cover {
+
+    width: 140px;
+
+}
+
+
+/* Adventure Cover Image */
+
+.adventure-cover-image {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: var(--radius-md);
+
+        border: 2px solid rgba(32, 144, 249, .55);
+
+    box-shadow:
+    0 0 8px rgba(32, 144, 249, .18);
+
+}
+
+
+/* Adventure Details */
+
+.adventure-details {
+
+    flex: 1;
+
+}
+
+/* Adventure Title */
+
+.adventure-title {
+
+}
+
+
+/* Adventure Info */
+
+.adventure-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-sm);
+
+}
+
+
+/* Adventure Platform */
+
+.adventure-platform {
+    
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* Adventure Platform Logo */
+
+.adventure-platform-logo {
+
+    height: 28px;
+
+    margin-top: -10px;
+
+}
+
+
+/* Adventure Dates */
+
+.adventure-dates {
+
+    font-size: .875rem;
+
+    color: #bfbfbf;
+
+    margin-bottom: 14px;
+
+    margin-top: 10px;
+
+}
+
+
+/* Adventure Status */
+
+.adventure-status {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+    
+    gap: 40px;
+
+}
+
+
+/* Adventure Difficulty */
+
+.adventure-difficulty {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+
+/* Adventure Achievement */
+
+.adventure-achievement {
+
+    display: flex;
+    align-items: center;
+
+}
+
+.adventure-difficulty-icons {
+
+    display: flex;
+    gap: 4px;
+
+}
+
+.difficulty-icon {
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+.difficulty-active {
+
+    opacity: 1;
+
+}
+
+.difficulty-inactive {
+
+    opacity: .25;
+
+}
+
+/* Adventure Label */
+
+.adventure-label {
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    color: var(--text-secondary);
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+
+}
+
+.achievement-badge {
+
+    width: 90px;
+
+    height: auto;
+
+}
+
+/* Adventure Empty */
+
+.adventure-empty {
+
+    padding: var(--space-32);
+
+    text-align: center;
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-body);
+
+    border: 1px dashed var(--color-border);
+
+    border-radius: var(--radius-md);
+
+}
+
+/* Adventure Year */
+
+.adventure-year {
+    grid-column: 1 / -1;
+}
+
+.adventure-year-list {
+    max-height: 5000px;
+    overflow: hidden;
+    opacity: 1;
+
+    transition:
+        max-height 0.45s ease,
+        opacity 0.4s ease;
+}
+
+.adventure-year:not(.is-open) .adventure-year-list {
+    max-height: 0;
+    opacity: 0;
+}
+
+
+@media (min-width: 1024px) {
+
+    .adventure-year-list {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: var(--space-lg);
+
+    }
+
+}
+
+
+.adventure-year-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+
+    width: 100%;
+
+    padding: var(--space-sm) 0;
+    margin-bottom: var(--space-sm);
+
+    cursor: pointer;
+    user-select: none;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+.adventure-year-header:hover {
+    opacity: 0.85;
+}
+
+
+.adventure-year-counter {
+    font-size: 0.85rem;
+
+    opacity: 0.7;
+
+    line-height: 1;
+
+    margin-left: 10px;
+}
+
+.adventure-year-title {
+    margin: 0;
+
+    font-size: 1.25rem;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    transition: color 0.2s ease;
+}
+
+.adventure-year-toggle {
+    font-size: 0.75rem;
+    line-height: 1;
+    width: 16px;
+    text-align: center;
+    opacity: 0.7;
+
+    transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.adventure-year-header:hover .adventure-year-title {
+    color: var(--color-primary);
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    padding: var(--space-xl) var(--space-lg);
+
+    margin-top: var(--space-xl);
+
+    text-align: center;
+
+    background-color: var(--color-surface);
+
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-primary);
+}
+
+.footer-brand {
+    margin-bottom: var(--space-xs);
+}
+
+.footer-tagline {
+    margin-bottom: var(--space-sm);
+
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--space-sm);
+
+    margin-bottom: var(--space-sm);
+}
+
+.footer-link + .footer-link::before {
+    content: "·";
+    margin-right: var(--space-sm);
+    opacity: 0.5;
+}
+
+.footer-brand {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+/*
+
+Layout 01 - 4 Colunas (Desktop)
+
+Layout 02 - 2 Colunas (Notebook / Tablet)
+
+Layout 03 - 1 Coluna (Mobile)
+
+*/
+
+
+/* ==================================================
+   NOTEBOOK / TABLET
+================================================== */
+
+@media (max-width: 1199px) {
+
+    .container {
+
+        padding: 0 24px;
+
+    }
+
+    .journey-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+    .container {
+
+        padding: 0 12px;
+
+    }
+
+    .journey-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-lg);
+    }
+
+    .branding {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .journey-summary .section-header {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--space-sm);
+}
+
+.journey-summary .section-header h2 {
+    white-space: nowrap;
+}
+
+.journey-summary .section-divider {
+    display: none;
+}
+
+.journey-summary .section-header p {
+    flex-basis: 100%;
+    margin: 0;
+    padding-left: 0;
+}
+
+.adventure-panel .section-header {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--space-sm);
+}
+
+.adventure-panel .section-header h2 {
+    white-space: nowrap;
+}
+
+.adventure-panel .section-divider {
+    display: none;
+}
+
+.adventure-panel .section-header p {
+    flex-basis: 100%;
+    margin: 0;
+    padding-left: 0;
+}
+
+.adventure-year-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: var(--space-md);
+}
+
+.twitch-status {
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+.twitch-status-action {
+    white-space: nowrap;
+}
+
 }

@@ -14,7 +14,602 @@
 
 <body>
 
-    <h1>GameDex Feriassauro</h1>
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <div class="branding">
+
+                <div class="logo">
+                    <img 
+                     src="assets/images/branding/logos/gamedex-logo.png"
+                     alt="GameDex do Feriassauro"
+                     class="site-logo"
+>
+                </div> <!-- Logo -->
+
+                <p class="subtitle">
+                    Todas as aventuras que vivemos juntos!
+                </p>
+
+            </div> <!-- Branding -->
+
+            <div class="header-twitch"> <!-- Header Twitch -->
+
+<a
+    href="https://www.twitch.tv/feriassauro"
+    class="twitch-status"
+    target="_blank"
+    rel="noopener"
+>
+    <img
+    src="assets/images/branding/icons/twitch.svg"
+    alt=""
+    class="twitch-status-icon"
+>
+
+    <div class="twitch-status-content">
+
+        <span class="twitch-status-label">
+            SIGA NA TWITCH
+        </span>
+
+        <span class="twitch-status-action">
+            E NÃO PERCA NENHUMA AVENTURA! →
+        </span>
+
+    </div>
+</a>
+            </div>
+
+        </div> <!-- Container -->
+
+    </header> <!-- Header -->
+
+
+    <!-- ==================================================
+         MAIN
+    =================================================== -->
+
+    <main class="main">
+
+        <div class="container">
+
+            <!-- ==============================================
+                 JOURNEY SUMMARY
+            =============================================== -->
+
+            <section class="journey-summary">
+
+                <div class="summary-panel">
+
+                    <!-- Section Header -->
+                    <div class="section-header">
+
+                        <div class="section-icon">
+
+                         <img
+                            src="assets/images/branding/icons/diary.svg"
+                            alt="Diário da Jornada"
+                            >
+
+                        </div> <!-- Section Icon -->
+
+                        <h2>Diário da Jornada</h2>
+
+                        <span class="section-divider"></span>
+
+                        <p>Veja por onde nos aventuramos.</p>
+
+                    </div> <!-- Section Header -->
+
+
+<!-- Journey Grid -->
+<div class="journey-grid">
+
+    <!-- ==================================================
+         JOURNEY COUNTER
+    =================================================== -->
+
+    <div class="journey-card">
+
+        <!-- Journey Card Heading -->
+        <div class="journey-card-heading">
+
+            <div class="journey-card-icon">
+
+                <img
+                    src="assets/images/branding/icons/trophy.svg"
+                    alt="Troféu">
+
+            </div>
+
+            <h3 class="journey-card-title">
+
+                Aventuras Concluídas
+
+            </h3>
+
+        </div> <!-- Journey Card Heading -->
+
+
+        <!-- Journey Card Body -->
+        <div class="journey-card-body">
+
+            <div
+                id="games-completed"
+                class="journey-card-value">
+
+                000
+
+            </div>
+
+            <p class="journey-card-caption">
+
+                Jogos finalizados
+
+            </p>
+
+        </div> <!-- Journey Card Body -->
+
+
+        <!-- Journey Card Footer -->
+        <div class="journey-card-footer">
+
+            <p>
+
+                ... e a jornada continua.
+
+            </p>
+
+        </div> <!-- Journey Card Footer -->
+
+    </div> <!-- Journey Counter -->
+
+
+    <!-- ==================================================
+         CURRENT ADVENTURE
+    =================================================== -->
+
+    <div class="journey-card">
+
+        <!-- Journey Card Heading -->
+        <div class="journey-card-heading">
+
+            <div class="journey-card-icon">
+
+                <img
+                    src="assets/images/branding/icons/controller.svg"
+                    alt="Aventura Atual">
+
+            </div>
+
+            <h3 class="journey-card-title">
+
+                Aventura Atual
+
+            </h3>
+
+        </div> <!-- Journey Card Heading -->
+
+
+        <!-- Journey Card Body -->
+        <div class="journey-card-body">
+
+            <!-- Cover -->
+            <div class="journey-card-cover">
+
+                <img
+                    id="current-game-cover"
+                    src=""
+                    alt="Capa do jogo">
+
+            </div>
+
+            <!-- Game Info -->
+            <div class="journey-card-game-info">
+
+                <h3
+                    id="current-game-title"
+                    class="journey-card-game-title">
+
+                    Carregando...
+
+                </h3>
+
+            </div>
+
+        </div> <!-- Journey Card Body -->
+
+
+        <!-- Journey Card Footer -->
+        <div class="journey-card-footer">
+
+            <div class="journey-card-game-platform">
+
+                <img
+                    id="current-game-platform-logo"
+                    src=""
+                    alt="Logo da plataforma">
+
+                <span id="current-game-platform">
+
+                    Carregando...
+
+                </span>
+
+            </div>
+
+        </div> <!-- Journey Card Footer -->
+
+    </div> <!-- Current Adventure -->
+
+
+    <!-- ==================================================
+         LONGEST ADVENTURE
+    =================================================== -->
+
+    <div class="journey-card">
+
+        <!-- Journey Card Heading -->
+        <div class="journey-card-heading">
+
+            <div class="journey-card-icon">
+
+                <img
+                    src="assets/images/branding/icons/layers.svg"
+                    alt="Aventura Mais Longa">
+
+            </div>
+
+            <h3 class="journey-card-title">
+
+                Aventura Mais Longa
+
+            </h3>
+
+        </div> <!-- Journey Card Heading -->
+
+
+        <!-- Journey Card Body -->
+        <div class="journey-card-body">
+
+            <div
+                id="longest-franchise"
+                class="journey-card-franchise">
+
+                CARREGANDO...
+
+            </div>
+
+            <p
+                id="longest-franchise-total"
+                class="journey-card-subtitle">
+
+                0 jogos concluídos
+
+            </p>
+
+        </div> <!-- Journey Card Body -->
+
+
+        <!-- Journey Card Footer -->
+        <div class="journey-card-footer">
+
+            <p>
+
+                ... a maior jornada até agora.
+
+            </p>
+
+        </div> <!-- Journey Card Footer -->
+
+    </div> <!-- Longest Adventure -->
+
+
+    <!-- ==================================================
+         NEXT ADVENTURE
+    =================================================== -->
+
+    <div class="journey-card">
+
+        <!-- Journey Card Heading -->
+        <div class="journey-card-heading">
+
+            <div class="journey-card-icon">
+
+                <img
+                    src="assets/images/branding/icons/flag.svg"
+                    alt="Próxima Aventura">
+
+            </div>
+
+            <h3 class="journey-card-title">
+
+                Próxima Aventura
+
+            </h3>
+
+        </div> <!-- Journey Card Heading -->
+
+
+        <!-- Journey Card Body -->
+        <div class="journey-card-body">
+
+            <!-- Cover -->
+            <div class="journey-card-cover">
+
+                <img
+                    id="next-game-cover"
+                    src=""
+                    alt="Capa do próximo jogo">
+
+            </div>
+
+            <!-- Game Info -->
+            <div class="journey-card-game-info">
+
+                <h3
+                    id="next-game-title"
+                    class="journey-card-game-title">
+
+                    Carregando...
+
+                </h3>
+
+            </div>
+
+        </div> <!-- Journey Card Body -->
+
+
+        <!-- Journey Card Footer -->
+        <div class="journey-card-footer">
+
+            <div class="journey-card-game-platform">
+
+                <img
+                    id="next-game-platform-logo"
+                    src=""
+                    alt="Logo da plataforma">
+
+                <span id="next-game-platform">
+
+                    Carregando...
+
+                </span>
+
+            </div>
+
+        </div> <!-- Journey Card Footer -->
+
+    </div> <!-- Next Adventure -->
+
+</div> <!-- Journey Grid -->
+
+
+                </div> <!-- Summary Panel -->
+
+            </section> <!-- Journey Summary -->
+
+
+     <!-- ==============================================
+        ADVENTURES
+       =============================================== -->
+
+        <section class="adventures">
+
+           
+            <div class="adventure-panel">
+                
+
+            <!-- Section Header -->
+             <div class="section-header">
+
+          <!-- Section Icon -->
+          <div class="section-icon">
+
+            <img
+                src="assets/images/branding/icons/adventure.svg"
+                alt="Registro de Aventuras">
+
+         </div> <!-- Section Icon -->
+
+         <h2>Registro de Aventuras</h2>
+
+          <span class="section-divider"></span>
+
+          <p>Reviva cada capítulo da jornada do Feriassauro.</p>
+
+         </div> <!-- Section Header -->
+
+             <!-- Adventure Content -->
+            <div class="adventure-content">
+
+              <!-- Adventure Filter -->
+             <div class="adventure-filter">
+
+                  <!-- Adventure Filter Label -->
+                  <label
+                      for="platform-filter"
+                     class="adventure-filter-label">
+
+                     Plataforma
+
+                    </label> <!-- Adventure Filter Label -->
+
+                        <!-- Adventure Filter Row -->
+                         <div class="adventure-filter-row">
+
+                            <!-- Adventure Filter Select -->
+                                  <select
+                                 id="platform-filter"
+                                class="adventure-filter-select">
+
+                                <option value="all">Todas</option>
+
+                                <option value="playstation">PlayStation</option>
+
+                                <option value="nintendo">Nintendo</option>
+
+                                <option value="microsoft">Microsoft</option>
+
+                                <option value="sega">SEGA</option>
+
+                                <option value="pc">PC</option>
+
+                             </select> <!-- Adventure Filter Select -->
+
+                            <!-- Adventure Filter Counter -->
+                            <div class="adventure-filter-counter">
+
+                             0 Aventuras
+
+                             </div> <!-- Adventure FilterCounter -->
+
+                        </div> <!-- Adventure Filter Row -->
+              
+                </div> <!-- Adventure Filter -->
+
+                <!-- Adventure List -->
+                 <div class="adventure-list">
+
+
+                </div> <!-- Adventure List -->
+
+                <!-- Adventure Card Template -->
+                    <template id="adventure-card-template">
+
+                          <!-- Adventure Card -->
+                    <article class="adventure-card">
+
+                        <!-- Adventure Cover -->
+                        <div class="adventure-cover">
+
+                            <img
+                             class="adventure-cover-image"
+                               src=""
+                              alt="Capa do jogo">
+
+                        </div> <!-- Adventure Cover -->
+
+                        <!-- Adventure Details -->
+                        <div class="adventure-details">
+
+                           <!-- Adventure Title -->
+                            <h3 class="adventure-title">
+
+                                 Nome do Jogo
+
+                            </h3> <!-- Adventure Title --> 
+
+
+                            <!-- Adventure Info -->
+                             <div class="adventure-info">
+
+
+                                <!-- Adventure Platform -->
+                                    <div class="adventure-platform">
+
+                                     <img
+                                        class="adventure-platform-logo"
+                                         src=""
+                                        alt="">
+
+                                </div> <!-- Adventure Platform -->
+
+
+                                <!-- Adventure Dates -->
+                                    <div class="adventure-dates">
+
+
+                                </div> <!-- Adventure Dates -->
+
+
+                            </div> <!-- Adventure Info -->
+
+                            <!-- Adventure Status -->
+                                <div class="adventure-status">
+
+                                    <!-- Adventure Difficulty -->
+                                       <div class="adventure-difficulty">
+
+                                          <div class="adventure-difficulty-icons">
+
+                                     </div>
+
+                                         <span class="adventure-label">
+
+                                             Dificuldade
+
+                                        </span>
+
+                                    </div> <!-- Adventure Difficulty -->
+
+
+                                    <!-- Adventure Achievement -->
+                                       <div class="adventure-achievement">
+
+                                    </div> <!-- Adventure Achievement -->
+
+
+                            </div> <!-- Adventure Status -->
+
+
+                        </div> <!-- Adventure Details -->
+
+                     </article> <!-- Adventure Card -->
+
+                </template> <!-- Adventure Card Template -->
+
+           
+
+            </div> <!-- Adventure Content -->
+
+         </div> <!-- Adventure Panel -->
+
+        </section> <!-- Adventures -->
+    
+
+        </div> <!-- Container -->
+
+    </main> <!-- Main -->
+
+
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+             GameDex do Feriassauro
+        </div>
+
+        <div class="footer-tagline">
+            Uma aventura de cada vez. 🦖🎮
+        </div>
+
+        <div class="footer-links">
+
+            <a href="https://www.twitch.tv/feriassauro" class="footer-link">Twitch</a>
+            <a href="https://www.instagram.com/feriassauro" class="footer-link">Instagram</a>
+            <a href="https://www.tiktok.com/@feriassauro" class="footer-link">TikTok</a>
+            <a href="https://www.youtube.com/feriassauro" class="footer-link">YouTube</a>
+
+        </div>
+
+        <div class="footer-copyright">
+            © 2026 Feriassauro
+        </div>
+
+
+    
+</footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+
 
 </body>
 
