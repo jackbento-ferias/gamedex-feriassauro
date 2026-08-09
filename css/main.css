@@ -1143,7 +1143,6 @@ Layout 03 - 1 Coluna (Mobile)
     width: 100%;
     box-sizing: border-box;
     min-width: 0;
-
     padding: var(--space-md);
     gap: var(--space-md);
 }
@@ -1151,6 +1150,56 @@ Layout 03 - 1 Coluna (Mobile)
 .adventure-card > * {
     min-width: 0;
 }
+
+.adventure-details {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+/* ==========================================
+   Adventure Status — Mobile
+========================================== */
+
+.adventure-status {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Dificuldade */
+.adventure-difficulty {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    width: max-content !important;
+
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+/* Platina */
+.adventure-achievement {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    margin: 8px 0 0 0 !important;
+}
+
+/* Badge */
+.adventure-achievement .achievement-badge {
+    display: block !important;
+
+    position: static !important;
+
+    width: 90px !important;
+    height: auto !important;
+
+    margin: 0 !important;
+}
+
 
 .twitch-status {
     width: 100%;
