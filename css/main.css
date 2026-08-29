@@ -39,40 +39,105 @@ h1 {
 ================================================== */
 
 .header {
+    position: relative;
     width: 100%;
-    padding: 20px 0;
 
-    background-color: var(--color-surface);
+    min-height: 175px;
+    padding: 24px 0;
+
+    background: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
+
+    box-sizing: border-box;
+    overflow: visible;
 }
 
+
+/* ==================================================
+   HEADER CONTAINER
+================================================== */
+
 .header .container {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+
+    min-height: 127px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
     align-items: center;
 }
 
-.branding {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+
+/* ==================================================
+   LOGO — ESQUERDA
+================================================== */
+
+.header .branding {
+    grid-column: 1;
+
+    justify-self: start;
+    align-self: center;
+
+    text-align: center;
 }
 
-.site-logo {
-    width: 280px;
+.header .site-logo {
+    width: 250px;
     height: auto;
+
     display: block;
 }
 
+.header .subtitle {
+    margin: 8px 0 0;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   FERIASSAURO — CENTRO
+================================================== */
+
+.header-mascot {
+    grid-column: 2;
+
+    justify-self: center;
+    align-self: center;
+
+    width: 110px;
+    height: auto;
+
+    display: block;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   TWITCH — DIREITA
+================================================== */
 
 .header-twitch {
-    display: flex;
-    align-items: center;
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
 }
+
+
+/* ==================================================
+   TWITCH BUTTON
+================================================== */
 
 .twitch-status {
     display: flex;
     align-items: center;
+
     gap: var(--space-md);
 
     padding: var(--space-md) var(--space-lg);
@@ -97,7 +162,9 @@ h1 {
 .twitch-status:hover {
     border-color: var(--color-primary);
     background-color: var(--color-surface);
+
     transform: translateY(-2px);
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
@@ -106,28 +173,43 @@ h1 {
 }
 
 
+/* ==================================================
+   TWITCH CONTENT
+================================================== */
+
 .twitch-status-content {
     display: flex;
     flex-direction: column;
+
     gap: 2px;
 }
 
 .twitch-status-label {
     font-family: var(--font-family);
+
     font-size: 0.95rem;
     font-weight: 600;
+
     letter-spacing: 0.02em;
     line-height: 1.2;
 }
 
 .twitch-status-action {
     font-family: var(--font-family);
+
     font-size: 0.8rem;
     font-weight: 400;
+
     letter-spacing: 0.015em;
     line-height: 1.2;
+
     opacity: 0.8;
 }
+
+
+/* ==================================================
+   TWITCH ICON
+================================================== */
 
 .twitch-status-icon {
     width: 26px;
@@ -138,20 +220,56 @@ h1 {
     display: block;
 }
 
+
+/* ==================================================
+   HEADER MASCOT
+================================================== */
+
+.header-mascot {
+    grid-column: 2;
+
+    justify-self: center;
+    align-self: center;
+
+    width: 110px;
+    height: auto;
+
+    display: block;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+
 /* ==================================================
    JOURNEY SUMMARY
 ================================================== */
 
 .journey-summary {
-    margin-bottom: var(--space-2xl);
+    position: relative;
+    margin-bottom: 50px;
 }
 
 .summary-panel {
+
+    position: relative;
     padding: var(--space-xl);
 
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
+}
+
+.journey-mascot {
+    position: absolute;
+    right: 5px;
+
+    width: 200px;
+    height: auto;
+
+    top: 375px;
+    bottom: 0;
+
 }
 
 
@@ -1092,11 +1210,48 @@ Layout 03 - 1 Coluna (Mobile)
 
     }
 
-    .header .container {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-lg);
-    }
+.header .container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: auto;
+}
+
+.header {
+    min-height: 260px;
+    padding: 20px 0;
+}
+
+.header .branding {
+    order: 1;
+}
+
+.header-mascot {
+    order: 2;
+
+    width: 85px;
+}
+
+.header-twitch {
+    position: static;
+
+    order: 3;
+
+    transform: none;
+}
+
+.header .site-logo {
+    width: 220px;
+}
+
+.header .subtitle {
+    margin-top: 5px;
+}
 
     .branding {
         display: flex;
@@ -1318,3 +1473,12 @@ Layout 03 - 1 Coluna (Mobile)
 }
 
 }
+
+@media (max-width: 767px) {
+
+    .journey-mascot {
+        display: none;
+    }
+
+}
+
