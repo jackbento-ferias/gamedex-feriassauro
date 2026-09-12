@@ -225,8 +225,27 @@ function updateJourney(games) {
         game.status === "Zerado"
     ).length;
 
+
+    // Total de Platinas + jogos 100%
+    const totalAchievements = games.filter(game =>
+        game.status === "Zerado" &&
+        (
+            game.platina === "Platina" ||
+            game.platina === "100%"
+        )
+    ).length;
+
+
+    // Atualiza os contadores
     updateJourneyCounter(totalCompleted);
 
+    const achievementCounter =
+        document.getElementById("games-achievements");
+
+    if (achievementCounter) {
+        achievementCounter.textContent =
+            String(totalAchievements).padStart(2, "0");
+    }
 }
 
 function updateCurrentAdventure(game) {

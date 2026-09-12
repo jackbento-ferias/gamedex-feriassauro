@@ -647,6 +647,36 @@ h1 {
 
 }
 
+/* ==========================================
+   Conquistas da Jornada
+========================================== */
+
+.journey-card-achievements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    margin-top: 20px;
+
+    font-size: 16px;
+}
+
+.journey-card-achievements-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.journey-card-achievements-value {
+    color: var(--color-secondary);
+    font-weight: 900;
+}
+
+.journey-card-achievements-label {
+    color: var(--color-text-secondary);
+}
+
 /* ==================================================
    ADVENTURES
 ================================================== */
